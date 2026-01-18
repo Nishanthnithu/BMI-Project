@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="card">
+    <h1>Calculat</h1>
+    <p>Height</p>
+    <input type="number" id="val" placeholder="Enter your height">
+    <p>Weight</p>
+    <input type="number" id="value" placeholder="Enter your weight">
+    <p>Click the  button </p>
+    <button onclick="cal()">Submit</button>
+    <div id="result"></div>
+   </div>
+   <script>
+    function cal(){
+        let inputheight = document.getElementById("val").value=""
+        let inputweight = document.getElementById("value").value=""
+
+        let height = parseFloat(inputheight)
+        let weight = parseFloat(inputweight)
+
+       let heightcm = height/100
+
+        let bmi = weight / (height * height)
+
+        document.getElementById("result").innerText=`your condition is up to : ${bmi.toFixed(2)}`
+        
+    }
+    </script>
+</body>
+</html>
